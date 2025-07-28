@@ -1,83 +1,102 @@
+/* style.css */
+
 body {
-  font-family: Arial, sans-serif;
-  background-color: #111;
-  color: #fff;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #0f0f0f;
   margin: 0;
   padding: 0;
-  text-align: center;
+  color: #ffffff;
 }
 
-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 20px;
-}
-
-.logo {
-  height: 50px;
-}
-
-.linktree {
-  color: #0ff;
-  text-decoration: none;
-  font-size: 1.2em;
-}
-
-.grid {
+.container {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-  padding: 40px;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 1rem;
+  padding: 2rem;
 }
 
 .box {
-  background-color: #222;
-  border: 2px solid #555;
-  padding: 40px;
-  font-size: 2em;
-  border-radius: 10px;
   position: relative;
-  transition: transform 0.2s;
+  background-color: #1f1f1f;
+  padding: 1rem;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out;
 }
 
 .box:hover {
   transform: scale(1.05);
 }
 
-.released {
-  background-color: #0a0;
-  color: #000;
+.box.set-day {
+  border: 2px solid red;
+  color: red;
 }
 
-.release-date {
-  font-size: 2em;
+.slide-out {
+  position: absolute;
+  top: 0;
+  left: 100%;
+  height: 100%;
+  width: 100%;
+  background-color: #2a2a2a;
+  border-radius: 0 10px 10px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: left 0.3s ease-in-out;
+  z-index: 10;
 }
 
-.hover-links {
-  margin-top: 10px;
+.box.set-day:hover .slide-out {
+  left: 100%;
+  animation: slideIn 0.3s forwards;
 }
 
-.hover-links a {
-  display: inline-block;
-  margin: 5px;
-  color: #000;
-  background: #fff;
-  padding: 5px 10px;
+@keyframes slideIn {
+  from {
+    left: 100%;
+  }
+  to {
+    left: 100%;
+  }
+}
+
+.link-button {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: red;
+  color: #fff;
+  padding: 0.5rem 1rem;
   border-radius: 5px;
   text-decoration: none;
+  margin: 0.5rem 0;
+  transition: background-color 0.2s ease-in-out;
 }
 
-.ep-link {
-  margin-top: 40px;
+.link-button:hover {
+  background-color: darkred;
 }
 
-.ep-link a {
-  color: #fff;
-  font-size: 1.5em;
-  text-decoration: underline;
+.logo {
+  width: 20px;
+  height: 20px;
 }
 
-.hidden {
-  display: none;
+/* Ensure consistent box sizing */
+.box {
+  min-height: 100px;
+}
+
+.container > * {
+  min-height: 100px;
 }
