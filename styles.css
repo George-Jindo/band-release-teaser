@@ -1,0 +1,83 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #111;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.logo {
+  height: 50px;
+}
+
+.linktree {
+  color: #0ff;
+  text-decoration: none;
+  font-size: 1.2em;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 40px;
+}
+
+.box {
+  background-color: #222;
+  border: 2px solid #555;
+  padding: 40px;
+  font-size: 2em;
+  border-radius: 10px;
+  position: relative;
+  transition: transform 0.2s;
+}
+
+.box:hover {
+  transform: scale(1.05);
+}
+
+.released {
+  background-color: #0a0;
+  color: #000;
+}
+
+.release-date {
+  font-size: 2em;
+}
+
+.hover-links {
+  margin-top: 10px;
+}
+
+.hover-links a {
+  display: inline-block;
+  margin: 5px;
+  color: #000;
+  background: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.ep-link {
+  margin-top: 40px;
+}
+
+.ep-link a {
+  color: #fff;
+  font-size: 1.5em;
+  text-decoration: underline;
+}
+
+.hidden {
+  display: none;
+}
