@@ -2,37 +2,41 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Band Release Teaser</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Band Single Release</title>
   <link rel="stylesheet" href="styles.css" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
 </head>
 <body>
-  <header>
-    <img src="logo.png" alt="Band Logo" class="logo" />
-    <a href="https://linktr.ee/bandname" target="_blank" class="linktree">Linktree</a>
+  <header class="header">
+    <img src="logo.png" alt="Band Logo" class="logo">
+    <a href="https://linktr.ee/yourband" class="linktree" target="_blank">Linktree</a>
   </header>
 
-  <main>
-    <section class="grid">
-      <div class="box released">
-        <div class="release-date">Aug 6</div>
-        <div class="hover-links">
-          <a href="https://youtube.com" target="_blank">YouTube</a>
-          <a href="https://spotify.com" target="_blank">Spotify</a>
-        </div>
+ 
+  <main class="container">
+    
+    <div class="box release" data-date="August 6">
+      <span class="number">06</span>
+      <div class="hover-card">
+        <a href="https://youtube.com" target="_blank" class="icon youtube">
+          🎥
+        </a>
+        <a href="https://spotify.com" target="_blank" class="icon spotify">
+          🎵
+        </a>
       </div>
-      <div class="box"><span class="slot">0</span></div>
-      <div class="box"><span class="slot">0</span></div>
-      <div class="box"><span class="slot">0</span></div>
-      <div class="box"><span class="slot">0</span></div>
-      <div class="box"><span class="slot">0</span></div>
-    </section>
+    </div>
 
-    <section class="ep-link hidden">
-      <a href="#">Collective EP</a>
-    </section>
+    <!-- 5 animated boxes -->
+    <div class="box"><span class="number"></span></div>
+    <div class="box"><span class="number"></span></div>
+    <div class="box"><span class="number"></span></div>
+    <div class="box"><span class="number"></span></div>
+    <div class="box"><span class="number"></span></div>
+    
   </main>
+  
 
   <script src="script.js"></script>
 </body>

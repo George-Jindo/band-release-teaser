@@ -1,102 +1,111 @@
-/* style.css */
-
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #0f0f0f;
   margin: 0;
-  padding: 0;
-  color: #ffffff;
+  font-family: Arial, sans-serif;
+  background-color: #0f0f0f;
+  color: white;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  background-color: #000;
+  border-bottom: 2px solid red;
+}
+
+.logo {
+  height: 60px;
+  width: auto;
+}
+
+.linktree {
+  color: red;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.2rem;
 }
 
 .container {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1.5rem;
   padding: 2rem;
+}
+
+#date-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columns */
+  grid-template-rows: repeat(2, auto);  /* 2 rows */
+  gap: 30px;
+  justify-items: center;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
 }
 
 .box {
   position: relative;
-  background-color: #1f1f1f;
-  padding: 1rem;
+  background-color: #1a1a1a;
+  height: 120px;
   border-radius: 10px;
-  text-align: center;
-  font-size: 1.5rem;
+  font-size: 2rem;
   font-weight: bold;
-  height: 100px;
   display: flex;
   align-items: center;
   justify-content: center;
+  border: 2px solid transparent;
+  transition: transform 0.3s ease;
   overflow: hidden;
-  transition: transform 0.3s ease-in-out;
+}
+
+.box.release {
+  border: 2px solid red;
+  color: red;
 }
 
 .box:hover {
   transform: scale(1.05);
 }
 
-.box.set-day {
-  border: 2px solid red;
-  color: red;
+.number {
+  z-index: 1;
 }
 
-.slide-out {
+.hover-card {
   position: absolute;
-  top: 0;
-  left: 100%;
-  height: 100%;
+  bottom: 0;
+  left: 0;
   width: 100%;
-  background-color: #2a2a2a;
-  border-radius: 0 10px 10px 0;
+  padding: 0.5rem;
+  background: rgba(0, 0, 0, 0.95);
   display: flex;
-  flex-direction: column;
   justify-content: center;
-  align-items: center;
-  transition: left 0.3s ease-in-out;
-  z-index: 10;
+  gap: 1rem;
+  transform: translateY(100%);
+  transition: transform 0.3s ease;
 }
 
-.box.set-day:hover .slide-out {
-  left: 100%;
-  animation: slideIn 0.3s forwards;
+.box.release:hover .hover-card {
+  transform: translateY(0);
 }
 
-@keyframes slideIn {
-  from {
-    left: 100%;
-  }
-  to {
-    left: 100%;
-  }
-}
-
-.link-button {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  background-color: red;
-  color: #fff;
-  padding: 0.5rem 1rem;
-  border-radius: 5px;
+.icon {
+  color: white;
+  font-size: 1.5rem;
   text-decoration: none;
-  margin: 0.5rem 0;
-  transition: background-color 0.2s ease-in-out;
+  transition: transform 0.2s ease;
 }
 
-.link-button:hover {
-  background-color: darkred;
+.icon:hover {
+  transform: scale(1.2);
 }
 
-.logo {
-  width: 20px;
-  height: 20px;
+.icon.youtube {
+  color: #FF0000;
 }
 
-/* Ensure consistent box sizing */
-.box {
-  min-height: 100px;
-}
-
-.container > * {
-  min-height: 100px;
+.icon.spotify {
+  color: #1DB954;
 }

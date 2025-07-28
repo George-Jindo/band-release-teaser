@@ -1,14 +1,15 @@
-const unreleasedBoxes = document.querySelectorAll('.box:not(.released)');
+document.addEventListener("DOMContentLoaded", () => {
+  const boxes = document.querySelectorAll(".box");
 
-function randomDigit() {
-  return Math.floor(Math.random() * 30 + 1);
-}
+  boxes.forEach(box => {
+    const numberSpan = box.querySelector(".number");
 
-function shuffleDigits() {
-  unreleasedBoxes.forEach(box => {
-    const slot = box.querySelector('.slot');
-    slot.textContent = randomDigit();
+    // Skip the release box (it has a fixed number)
+    if (!box.classList.contains("release")) {
+      setInterval(() => {
+        const rand = String(Math.floor(Math.random() * 31) + 1).padStart(2, "0");
+        numberSpan.textContent = rand;
+      }, 100);
+    }
   });
-}
-
-setInterval(shuffleDigits, 150); // change speed if needed
+});
