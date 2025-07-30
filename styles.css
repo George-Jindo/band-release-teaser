@@ -26,30 +26,20 @@ body {
   font-size: 1.2rem;
 }
 
-.container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: 1.5rem;
-  padding: 2rem;
-}
-
 #date-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr); /* 3 columns */
-  grid-template-rows: repeat(2, auto);  /* 2 rows */
-  gap: 30px;
-  justify-items: center;
-  align-items: center;
-  max-width: 1200px;
+  gap: 2rem;
+  max-width: 900px;
   margin: 0 auto;
-  padding: 40px 20px;
+  padding: 2rem;
 }
 
 .box {
   position: relative;
   background-color: #1a1a1a;
-  height: 120px;
   border-radius: 10px;
+  height: 140px;
   font-size: 2rem;
   font-weight: bold;
   display: flex;
@@ -91,14 +81,14 @@ body {
   transform: translateY(0);
 }
 
-.icon {
-  color: white;
-  font-size: 1.5rem;
-  text-decoration: none;
-  transition: transform 0.2s ease;
+.icon svg {
+  width: 24px;
+  height: 24px;
+  fill: currentColor;
+  transition: transform 0.3s ease;
 }
 
-.icon:hover {
+.icon:hover svg {
   transform: scale(1.2);
 }
 
@@ -109,3 +99,4 @@ body {
 .icon.spotify {
   color: #1DB954;
 }
+
