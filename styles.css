@@ -77,9 +77,22 @@ body {
   transition: transform 0.3s ease;
 }
 
+.box.release {
+  cursor: pointer;
+}
+
 .box.release:hover .hover-card {
   transform: translateY(0);
 }
+
+/* Keeps hover on desktop */
+.box.release:hover .hover-card,
+.hover-card.visible {
+  transform: translateY(0);
+  z-index: 2;
+}
+
+
 
 .icon svg {
   width: 24px;

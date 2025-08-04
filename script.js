@@ -12,4 +12,20 @@ document.addEventListener("DOMContentLoaded", () => {
       }, 100);
     }
   });
+
+  // Mobile fallback for .hover-card
+  const isTouch = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+
+  if (isTouch) {
+    document.querySelectorAll('.box.release').forEach(box => {
+      box.addEventListener('click', () => {
+        const card = box.querySelector('.hover-card');
+        const isVisible = card.classList.contains('visible');
+        // Hide all cards
+        document.querySelectorAll('.hover-card').forEach(c => c.classList.remove('visible'));
+        if (!isVisible) card.classList.add('visible');
+      });
+    });
+  }
 });
+
