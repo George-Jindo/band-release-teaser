@@ -133,3 +133,110 @@ body {
   color: #ccc;
   text-align: center;
 }
+
+/*CSS for intro sections*/
+.intro {
+  text-align: center;
+  padding: 2rem 1rem 1rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.headline {
+  font-size: 2rem;
+  color: white;
+  margin: 0;
+  font-weight: bold;
+}
+
+.headline .amp {
+  color: red;
+}
+
+.subhead {
+  color: #aaa;
+  font-size: 1rem;
+  margin-top: 0.5rem;
+}
+
+/* CSS for Social Links in Header */
+.social-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease;
+}
+
+.linktree-icon {
+  width: 28px;
+  height: 28px;
+  transition: transform 0.3s ease;
+  fill: red;
+}
+
+.dropdown-button:hover .linktree-icon {
+  transform: scale(1.2);
+  fill: white;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: #111;
+  border: 1px solid #333;
+  border-radius: 8px;
+  display: none;
+  flex-direction: column;
+  min-width: 160px;
+  z-index: 100;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  pointer-events: none;
+}
+
+.social-dropdown:hover .dropdown-menu,
+.dropdown-menu:hover {
+  display: flex;
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.dropdown-menu a {
+  color: white;
+  padding: 0.75rem 1rem;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.dropdown-menu a:hover {
+  background-color: #222;
+  color: red;
+}
+
+.dropdown-menu svg {
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
+}
+
+
+.icon.spotify { color: #1DB954; }
+.icon.youtube { color: #FF0000; }
+.icon.instagram { color: #E1306C; }

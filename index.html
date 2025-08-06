@@ -9,11 +9,31 @@
 </head>
 <body>
   <header class="header">
-    <img src="logo.png" alt="Band Logo" class="logo">
-    <a href="https://linktr.ee/yourband" class="linktree" target="_blank">Linktree</a>
-  </header>
+  <img src="logo.png" alt="Band Logo" class="logo">
+  
+  <!-- Custom Linktree Dropdown -->
+  <div class="social-dropdown">
+    <button aria-label="Linktree menu" class="dropdown-button">
+      <!-- Linktree SVG Icon -->
+      <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="linktree-icon" viewBox="0 0 24 24">
+        <path d="M12 2C6.486 2 2 6.485 2 12c0 5.515 4.486 10 10 10s10-4.485 10-10c0-5.515-4.486-10-10-10zm1 14.414V18h-2v-1.586l-2.293-2.293 1.414-1.414L11 14.586V10H9V8h2V5h2v3h2v2h-2v4.586l1.879-1.879 1.414 1.414L13 16.414z"/>
+      </svg>
+    </button>
 
-  <main id="date-grid">
+    <div class="dropdown-menu">
+      <a href="https://open.spotify.com/artist/0AAzel7V6VAL1FUWxSq5aZ?si=uCvltFqNQjCwGAmW-CBfvA" target="_blank" class="icon spotify">Spotify</a>
+      <a href="https://www.youtube.com/@Unfamiliarbandofficial" target="_blank" class="icon youtube">YouTube</a>
+      <a href="https://www.instagram.com/unfamiliarus/" target="_blank" class="icon instagram">Instagram</a>
+    </div>
+  </div>
+</header>
+
+<section class="intro">
+  <h1 class="headline">Released Tracks <span class="amp">&</span> Upcoming Releases</h1>
+  <p class="subhead">Check out what’s out now and what’s on the way. New singles drop monthly—stay tuned.</p>
+</section>
+
+<main id="date-grid">
     <!-- Release Box with Month and Title -->
 <div class="box release" data-date="April 30">
   <div class="release-info">
