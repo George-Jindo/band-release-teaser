@@ -134,7 +134,8 @@ body {
   text-align: center;
 }
 
-/*CSS for intro sections*/
+
+/*CSS for intro sections
 .intro {
   text-align: center;
   padding: 2rem 1rem 1rem;
@@ -158,8 +159,8 @@ body {
   font-size: 1rem;
   margin-top: 0.5rem;
 }
-
-/* CSS for Social Links in Header */
+*/
+/* CSS for Social Links in Header 
 .social-dropdown {
   position: relative;
   display: inline-block;
@@ -240,3 +241,24 @@ body {
 .icon.spotify { color: #1DB954; }
 .icon.youtube { color: #FF0000; }
 .icon.instagram { color: #E1306C; }
+*/
+
+.linktree-icon-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: red;
+  transition: transform 0.3s ease;
+}
+
+.linktree-icon-link:hover {
+  transform: scale(1.1);
+  color: white;
+}
+
+.linktree-icon {
+  width: 28px;
+  height: 28px;
+  fill: currentColor;
+}
