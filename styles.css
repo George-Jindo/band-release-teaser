@@ -27,12 +27,24 @@ body {
 }
 
 #date-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 columns */
+  display: flex;
+  flex-wrap: wrap;
   gap: 2rem;
   max-width: 900px;
   margin: 0 auto;
   padding: 2rem;
+  justify-content: center; /* centers the whole row */
+}
+
+#date-grid > * {
+  flex: 0 1 calc(33.333% - 2rem); /* no grow, can shrink, fixed basis */
+  box-sizing: border-box;
+}
+
+@media (max-width: 600px) {
+  #date-grid > * {
+    flex: 0 1 100%; /* full width on narrow screens */
+  }
 }
 
 .box {
